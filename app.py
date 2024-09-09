@@ -15,4 +15,8 @@ def alumnos():
 
 @app.route("/alumnos/guardar", methods=["POST"])
 def alumnosGuardar():
-    return f"Matrícula: {request.form["txtMatriculaFA"]} Nombre y Apellido: {request.form["txtNombreApellidoFA"]}"
+    matricula = request.form["txtmatriculaFA"]
+    nombreapellido = request.form["txtNombreApellidoFA"]
+    return f"matricula: {matricula} nombre y apellido : {nombreapellido}"
+
+app.run(debug=True, port=8000)
